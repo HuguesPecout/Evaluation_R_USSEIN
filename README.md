@@ -143,7 +143,7 @@ Attention, il sera sans doute nécéssaire de modifier les valeurs de certains a
 
 #### 7. Question de cours
 
-##### 7.1 Dans le docuement *Géomatique avec R*, retrouvez quelle fonction (de quel package ?) permet de découper une couche géographique raster en fonction de l'emprise d'une couche vectorielle. Indiquez la réponse en commentaire dans votre script. (**1 pt**)
+##### 7.1 Dans le document *Géomatique avec R*, retrouvez quelle fonction (de quel package ?) permet de découper une couche géographique raster en fonction de l'emprise d'une couche vectorielle. Indiquez la réponse en commentaire dans votre script. (**1 pt**)
 
 
 </br>
