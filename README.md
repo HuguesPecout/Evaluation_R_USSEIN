@@ -135,9 +135,9 @@ Voici un exemple simple de carte possible :
 
 </br>
 
-##### 6.4 Ajoutez le code nécessaire pour exporter automatiquement cette carte (800 pixel de large) en format svg. (**1 pt**)
+##### 6.4 Ajoutez le code nécessaire pour exporter automatiquement cette carte en format svg (width = 11) . (**1 pt**)
 
-Attention, il sera sans doute nécéssaire de modifier la veleur de certains arguments pour avoir une belle carte !
+Attention, il sera sans doute nécéssaire de modifier les valeurs de certains arguments pour avoir une belle carte  bien dimensionnée !
 
 </br>
 
