@@ -9,128 +9,84 @@
 # Chargement des librairies nécessaires 
 ###################################################################################################
 
-library(sf)
-library(mapsf)
-library(mapview)
-library(maptiles)
-library(osrm)
-library(tidygeocoder)
 
 
 
 ###################################################################################################
-# 1. Import et reprojection (2 points)
+# 1. Import des données
 ###################################################################################################
 
+# 1.1 Lister les couches géographiques d'un fichier GeoPackage (0,25 pt)
 
-
+# 1.2 Import des données géographiques (0,25 pt)
 
 
 
 ###################################################################################################
-# 2. Géocadage d’une adresse 
+# 2. Géocadage d’une adresse
 ###################################################################################################
 
-## B.1 Récupération de coordonnées géographiques
+## 2.1 Géocodez l’adresse (1 pt)
 
-# Construction d'un data.frame avec nom et adresse
+## 2.2 Construisez une couche géographique (point) à partir de la long et lat récupérées. (1 pt)
 
+# 2.3 Reprojetez cette couche géographique en projection "WGS 84 / UTM zone 28N". (1 pt)
 
-# Géocodage de l'adresse à partir de la base de données OpenStreetMap
-
-
-
-## B.2 Construisez un objet sf (couche géographique) à partir des coordonnées (WGS84) récupérées.
-
-
-
-## B.3 Transformez cette nouvelle couche géographique en projection WGS 84 / UTM zone 28N (32628)
-
-
-
-## B.4 Affichez le point sur une carte interactive avec le package mapview
-
+## 2.4 Vérifiez le géocodage à l’aide de la librairie mapview. (0.5 pt)
 
 
 
 
 
 ###################################################################################################
-# C. Calcul de centroïdes 
+# 3. Séléction attributaire
 ###################################################################################################
 
-# Créez une couche de point en calculant les centroïdes de départements sénégalais.
-
-
-
-
-
-
-###################################################################################################
-# D. Récupération de tuiles (fond de carte) OpenStreetMap
-###################################################################################################
-
-# En utilisant la librarie maptiles, récupérez une tuile OSM pour l’emprise du Sénégal. 
-# Utilisez un buffer de plusieurs kilomètres autour des limites du sénégal 
-
-
+## 3.1 Créez une nouvelle couche comportant uniquement les localités “Chef-lieu de département” (1 pt)
 
 
 
 
 
 ###################################################################################################
-# E. Affichage des données construites et récupérées
+# 4. Calcul d’une matrice de distance à partir de la base de données OpenStreetMap
 ###################################################################################################
 
+## 4.1 Calculez une matrice de distances routières et de distance temps entre la gare et les chef-lieu. (1 pt)
+
+## 4.2 Ajoutez ces distances routières et temps dans la couche géographique des chefs lieu de département. 
+## Profitez-en pour convertir ces valeurs en kilomètre et en heure. (1 pt)
 
 
+## 4.3 Quel est le chef lieu de département le plus éloigné par la route de la gare de Tambacounda ? 
+## Combien d’heures faut-il (selon OpenStreetMap) pour rejoindre cette ville en voiture ? 
+## Affichez les réponses à ces deux questions dans la console. (1 pt)
 
-
-
-###################################################################################################
-# F. Calculez une matrice de distances
-###################################################################################################
-
-## F.1 Distance euclidienne
-# Calculez une matrice de distance euclidienne (m) entre la grande Mosquée de Touba et l’ensemble des centroïdes des départements.
-
-
-
-## F.2 Distance par la route (réseau routier d’OpenStreetMap)
-
-
-
-## F.3 Ajoutez les différentes distances calculées à la couche géographiques des centroïdes des départements
 
 
 
 
 ###################################################################################################
-# G. Calcul d'indicateurs 
+# 5. Nombre d’aires protegées dans un rayon de 100km de la gare de Tambacounda
 ###################################################################################################
 
-## G.1 Calcul d’indicateurs globaux d’accessibilité
-# Calculez la médianne et la moyenne pour les trois types de distance récupérés
+## 5.1 Créez une zone tampon de 50 Km autour de la gare de Tambacounda (1 pt)
 
+## 5.2 Réalisez une séléction spatiale des aires protegees qui intersectent cette zone tampon de 50 km. (1 pt)
 
-
-## G.2 Calcul d’indicateurs de performance routière
-
-# Indice de sinuosité 
-
-# Indice de vitesse sur route
-
-# Indice global de performance
+## 5.3 Combien et quels sont les noms des aires protégées situées à moins de 50 km de la gare de Tambacounda ? (1 pt)
 
 
 
 
-## G.3 Cartographie de l’indice global de performance
 
+###################################################################################################
+# 6. Cartographie des aires protégées
+###################################################################################################
 
+## 6.1 Découpez la couche géographiques des aires protégées en fonction des limites du Sénégal. (1 pt)
 
-## G.4 Itinéraire le plus performant ?
+## 6.2 Construisez une carte de typologie des aires protégées du Sénégal. (3.5 pts)
 
 
 
@@ -138,17 +94,15 @@ library(tidygeocoder)
 
 
 ###################################################################################################
-# H. Récupération d’itinéraire
+# 7. Question de cours
 ###################################################################################################
 
-
-## H.1 Récupération de l’ititnéraire “Mosquee Touba - Dakar”
-
-
-
-## H.2 Cartographie de l’itinéraire récupéré
+## 7.1 Dans le docuement Géomatique avec R, retrouvez quelle fonction du package terra permet 
+## de découper une couche géographique raster en fonction de l’emprise d’une couche vectorielle. (1 pt)
 
 
 
 
 
+
+                  
